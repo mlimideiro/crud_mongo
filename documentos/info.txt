@@ -1,0 +1,21 @@
+use crud;
+
+db.personas.insert({
+    "plato" : "Ravioles con Tuco",
+    "ingredientes" : "Ravioles - Tuco",
+    "categoria" : "Plato Principal",
+    "precio" : "700"
+});
+
+db.createUser(
+  {
+    user :  "mongoadmin",
+    pwd :  "123456",
+    roles :  [
+      	 { 	role :  "readWrite",  db :  "crud" 	}
+    ]
+  }
+);
+
+mongo -u  mongoadmin -p 123456 --authenticationDatabase crud
+
