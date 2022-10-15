@@ -2,7 +2,7 @@
     require_once $_SERVER['DOCUMENT_ROOT'] . "/crud_mongo/vendor/autoload.php";
 
     class Conexion {
-        public static function conectar() {
+        public function conectar() {
            try {
                 $servidor = "127.0.0.1";
                 $puerto = "27017";
@@ -22,5 +22,8 @@
            }
         }
     }
+
+    // $objeto = new Conexion();
+    // var_dump($objeto->conectar());
 
 ?>
